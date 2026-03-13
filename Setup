@@ -1,0 +1,30 @@
+wsl --install
+// Restart PC
+wsl --install -d Ubuntu
+
+
+wsl --version
+/*
+WSL version: 2.6.3.0
+Kernel version: 6.6.87.2-1
+WSLg version: 1.0.71
+MSRDC version: 1.2.6353
+Direct3D version: 1.611.1-81528511
+DXCore version: 10.0.26100.1-240331-1435.ge-release
+Windows version: 10.0.26200.8037
+*/
+
+// Go to Ubuntu in command line
+sudo apt update && sudo apt upgrade
+
+// To open vscode in WSL
+cd ~/path-to-folder
+code .
+
+// If you don't have permission to create a python environment, run
+sudo chown -R $USER:$USER ./path-to-folder
+
+// Please god let this be the correct version
+sudo apt install python3.12-venv
+source .venv/bin/activate
+pip
